@@ -61,14 +61,14 @@ triangleRepeat(12);
 
 // 另一種寫法-Nested loop
 function triangleNested(size) {
-  let strr = "";
+  let str = "";
   for (let i = 1; i <= size; i++) {
     for (let j = 1; j <= i; j++) {
-      strr += "*";
+      str += "*";
     }
-    strr += "\n";
+    str += "\n";
   }
-  console.log(strr);
+  console.log(str);
 }
 
 triangleNested(5);
