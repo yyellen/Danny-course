@@ -1,11 +1,11 @@
-let xhtpp = new XMLHttpRequest();
+// https://www.geojs.io/docs/v1/endpoints/country/
+// https://developer.mozilla.org/zh-TW/docs/Web/API/Fetch_API/Using_Fetch
 
-xhtpp.onreadystatechange = function () {
-  if (this.readyState == 4 && this.status == 200) {
-    console.log("My first http request");
-    console.log(xhtpp.responseText);
-  }
-}
-
-xhtpp.open("GET", "https://get.geojs.io/v1/ip/country?ip=8.8.8.8", true);
-xhtpp.send();
+fetch('https://get.geojs.io/v1/ip/country?ip=8.8.8.8')
+  .then(function(response) {
+    return response.text();
+  })
+  .then(function(result) {
+    console.log(result);
+  });
+  
