@@ -1,15 +1,22 @@
 // eslint-disable-next-line
 import React, { Component }  from 'react';
 import './App.css';
-import Name from './Name'
+import Navbar from './Navbar';
+import Block from './Block';
 
 
 function App() {
   return (
     <div className="container">
-      <Name text="Danny"/>
-      <Name text="Molly"/>
-      <Name text="Anne"/>
+      <Navbar />
+      <div className="content">
+        <Block />
+        <Block />
+        <Block />
+        <Block />
+        <Block />
+        <Block />
+      </div>
     </div>
   );
 }
